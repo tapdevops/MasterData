@@ -2,19 +2,7 @@ FROM node:8.12.0-alpine
 
 #FROM ubuntu:${VERSION_ID}
 
-# packaging dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-        dh-make \
-        fakeroot \
-        build-essential \
-        devscripts \
-        lsb-release && \
-    rm -rf /var/lib/apt/lists/*
 
-
-# output directory
-ENV DIST_DIR=/tmp/nvidia-docker2-$PKG_VERS
-RUN mkdir -p $DIST_DIR
 
 # nvidia-docker 2.0
 COPY nvidia-docker $DIST_DIR/nvidia-docker
