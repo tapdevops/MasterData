@@ -1,6 +1,6 @@
 FROM node:8.12.0-alpine
 
-FROM ubuntu:${VERSION_ID}
+#FROM ubuntu:${VERSION_ID}
 
 # packaging dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
