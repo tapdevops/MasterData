@@ -13,7 +13,7 @@ FROM node:8.12.0-alpine
 ENV PORT=3006
 
 #RUN sed -i "s;@VERSION@;${REVISION#*+};" debian/changelog && \
-    if [ "$REVISION" != "$(dpkg-parsechangelog --show-field=Version)" ]; then exit 1; fi
+    #if [ "$REVISION" != "$(dpkg-parsechangelog --show-field=Version)" ]; then exit 1; fi
 
 
 # if you need a build script, uncomment the line below
