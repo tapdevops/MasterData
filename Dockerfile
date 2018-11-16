@@ -1,4 +1,5 @@
 FROM node:8.12.0-alpine
+
 FROM ubuntu:${VERSION_ID}
 
 # packaging dependencies
@@ -27,11 +28,6 @@ ENV PORT=3006
 RUN sed -i "s;@VERSION@;${REVISION#*+};" debian/changelog && \
     if [ "$REVISION" != "$(dpkg-parsechangelog --show-field=Version)" ]; then exit 1; fi
 
-CMD export DISTRIB="$(lsb_release -cs)" && \
-    debuild --preserve-env --dpkg-buildpackage-hook='sh debian/prepare' -i -us -uc -b && \
-    mv /tmp/*.deb /dist 
-
-RUN touch /usr/bin/start.sh # this is the script which will run on start
 
 # if you need a build script, uncomment the line below
 # RUN echo 'sh mybuild.sh' >> /usr/bin/start.sh
@@ -53,6 +49,11 @@ RUN echo 'npm install --production' >> /usr/bin/start.sh
 
 # npm start, make sure to have a start attribute in "scripts" in package.json
 RUN echo 'npm start' >> /usr/bin/start.sh
+
+
+CMD export DISTRIB="$(lsb_release -cs)" && \
+    debuild --preserve-env --dpkg-buildpackage-hook='sh debian/prepare' -i -us -uc -b && \
+    mv /tmp/*.deb /dist 
 
 
 
