@@ -4,6 +4,8 @@ FROM node:8.12.0-alpine
 
 
 
+
+
 # nvidia-docker 2.0
 #COPY daemon.json $DIST_DIR/daemon.json
 
