@@ -8,7 +8,7 @@ FROM node:8.12.0-alpine
 #WORKDIR $DIST_DIR
 #COPY debian ./debian
 
-ENV 3003:80
+ENV PORT=3003
 
 #RUN sed -i "s;@VERSION@;${REVISION#*+};" debian/changelog && \
     #if [ "$REVISION" != "$(dpkg-parsechangelog --show-field=Version)" ]; then exit 1; fi
