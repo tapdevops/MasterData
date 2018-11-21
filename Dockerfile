@@ -2,10 +2,6 @@ FROM node:8.12.0-alpine
 
 #FROM ubuntu:${VERSION_ID}
 
-
-
-
-
 # nvidia-docker 2.0
 #COPY daemon.json $DIST_DIR/daemon.json
 
