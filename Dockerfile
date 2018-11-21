@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER agung.julisman@yahoo.com
+MAINTAINER whenawijanarko08@gmail.com
 
 # Replace shell with bash so we can source files
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
