@@ -9,5 +9,5 @@ services:
      volumes:
       - ".:/app"
      ports:
-        - "3006:3006"
+        - "3006:80"
 
