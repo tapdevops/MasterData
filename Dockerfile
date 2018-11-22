@@ -17,7 +17,7 @@ RUN apt-get clean
 # we use node v6.0.0 as default
 
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 8.12.0-alpine
+ENV NODE_VERSION 8.12.0
 
 # Install nvm with node and npm
 RUN curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash \
