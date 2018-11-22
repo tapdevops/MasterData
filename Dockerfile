@@ -36,11 +36,7 @@ RUN npm i -g nodemon pm2
 ENV dir /app
 WORKDIR ${dir}
 
-COPY . /app
 
-CMD pm2 start app.js --no-daemon --watch 
-
-EXPOSE 3006
 
 
 
