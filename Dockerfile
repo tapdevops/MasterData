@@ -37,7 +37,7 @@ RUN npm i -g nodemon pm2
 COPY daemon.json $DIST_DIR/daemon.json
 
 
-ENV PORT=3006:80
+ENV dir /app
 WORKDIR ${dir}
 
 
