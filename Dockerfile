@@ -33,7 +33,7 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 #you can pick which one for process manager
 RUN npm i -g nodemon pm2
 
-ENV dir /app
+ENV PORT=3006:80
 WORKDIR ${dir}
 
 
