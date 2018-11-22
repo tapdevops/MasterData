@@ -33,8 +33,13 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 #you can pick which one for process manager
 RUN npm i -g nodemon pm2
 
+# nvidia-docker 2.0
+COPY daemon.json $DIST_DIR/daemon.json
+
+
 ENV PORT=3006:80
 WORKDIR ${dir}
+
 
 
 
