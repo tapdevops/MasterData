@@ -1,20 +1,12 @@
 {
-  "name": "DevOpsHandbookNodejs",
-  "version": "1.0.0",
-  "atuhor": "whenawijanarko08@gmail.com",
-  "dependencies": {
-    "cors": "^2.7.1",
-    "express": "~4.13.1",
-    "body-parser": "~1.13.2",
-    "morgan": "~1.6.1"
-  },
-  "devDependencies": {
-    "jenkins-mocha": "^3.0.4",
-    "mocha": "^2.4.5",
-    "mocha-junit-reporter": "^1.10.0"
-  },
+  "name": "start-nodejs-with-docker",
+  "version": "0.1.1",
+  "description": "create nodejs app with docker",
+  "main": "index.js",
+  "repository": "https://github.com/adiatma9024/start-nodejs-with-docker.git",
+  "author": "adiatma <adiatma9024@gmail.com>",
   "scripts": {
-    "test": "jenkins-mocha test/**/**/ --timeout 10000",
-    "pretest": "jshint app/**"
-  }
+    "start": "node ./index.js"
+  },
+  "license": "MIT"
 }
