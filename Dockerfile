@@ -1,4 +1,4 @@
-FROM node:6.11.2-alpine
+FROM node:6.11.2-alpine RUN apk add curl 
 
 WORKDIR /app
 
