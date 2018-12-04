@@ -1,9 +1,9 @@
 {
-  "name": "start-nodejs-with-docker",
+  "name": "masterdata",
   "version": "0.1.1",
   "description": "create nodejs app with docker",
   "main": "index.js",
-  "repository": "https://github.com/adiatma9024/start-nodejs-with-docker.git",
+  "repository": "https://github.com/tapdevops/masterdata.git",
   "author": "adiatma <adiatma9024@gmail.com>",
   "scripts": {
     "start": "node ./index.js"
