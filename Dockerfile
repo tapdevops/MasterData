@@ -1,7 +1,7 @@
-FROM node:8
+FROM node:6.11.2-alpine
 
 # Create app directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
@@ -17,6 +17,12 @@ COPY . /app
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
+
+
+
+
+
+
 
 
 
